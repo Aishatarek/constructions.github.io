@@ -37,13 +37,19 @@ h5 {
   text-align: center;
 }
 
-.navgroup {
+.offcanvas {
+  background-color: #2c2c2e !important;
+}
+
+/* .navgroup {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  width: 80vw !important;
+} */
 
-.navbar a {
+.navgroup a,
+.offcanvas-body a {
   color: white !important;
   position: relative;
   z-index: 3;
@@ -61,9 +67,46 @@ h5 {
   font-weight: 600;
 }
 
+.offcanlink {
+  color: white !important;
+  position: relative;
+  z-index: 3;
+  transition: all 1s ease-in-out;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .navbar a:hover {
   color: #ef5e24 !important;
 }
+
+.offcanvas-body img {
+  width: 50px;
+}
+
+.offcanvas {
+  background-color: #070707;
+}
+
+.offcanvas-header .btn-close {
+  color: white !important;
+  border: 2px solid white !important;
+  position: relative;
+  background: none !important;
+}
+
+.offcanvas-header .btn-close::after {
+  content: 'X';
+  position: absolute;
+  color: white !important;
+  top: 0;
+  left: 30%;
+  font-size: 20px;
+}
+
 
 .navbar-brand {
   padding: 5px !important;
@@ -71,7 +114,7 @@ h5 {
 
 .navbar img {
   height: 100px;
-  margin-left: 10px;
+  margin-right: 40px;
 }
 
 .dropdownn {
@@ -245,7 +288,7 @@ h5 {
   background-color: #f4f4f4;
   border-radius: 10px;
   position: relative;
-  padding: 20px 20px 40px;
+  padding: 20px 20px 50px;
 }
 
 .detailsdiv h3 {
@@ -382,6 +425,8 @@ h5 {
 
 .sec3imgdiv {
   position: relative;
+  height: 400px;
+
 }
 
 .sec3imgdiv .mainimg {
@@ -390,6 +435,8 @@ h5 {
   object-fit: cover;
   border-radius: 50%;
   margin-left: 30px;
+  position: absolute;
+  right: 30%;
 }
 
 .sec3imgdiv .img1,
@@ -1115,6 +1162,7 @@ footer .col-md-3 a svg {
   flex-direction: column;
   text-align: center;
   position: relative;
+  height: 400px;
 }
 
 .aboutsec6 .swiper-slide::after {
@@ -1176,15 +1224,15 @@ footer .col-md-3 a svg {
 
 .projectssec2 h3 {
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
   margin-bottom: 30px;
   color: #ef5e24;
-  font-weight: 600;
+  font-weight: 1000;
 }
 
 .projectssec2 .projectdiv {
   position: relative;
-  height: 350px;
+  height: 235px;
   margin-top: 50px;
   box-shadow: 0 0 15px #ccc;
   border-radius: 10px;
@@ -1194,7 +1242,7 @@ footer .col-md-3 a svg {
 .projectssec2 .projectdiv img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
   transition: all 0.7s ease-in-out;
 
@@ -1216,6 +1264,8 @@ footer .col-md-3 a svg {
   padding: 0 25px;
   opacity: 0;
   transition: all 0.7s ease-in-out;
+  padding: 10px;
+
 }
 
 .projectssec2 .projectdiv .hoverproject p {
@@ -1225,9 +1275,9 @@ footer .col-md-3 a svg {
 }
 
 .projectssec2 .projectdiv .hoverproject h5 {
-  font-size: 15px;
-  font-weight: 800;
-  color: #ef5e24;
+  font-size: 18px;
+  font-weight: 1000;
+  color: white;
 }
 
 .projectssec2 .projectdiv .hoverproject svg {
@@ -1282,7 +1332,7 @@ footer .col-md-3 a svg {
 
 .projectssec3 .projectdiv {
   position: relative;
-  height: 350px;
+  height: 300px;
   margin-top: 50px;
   box-shadow: 0 7px 16px rgb(12 12 12 / 22%);
   border-radius: 10px;
@@ -1291,7 +1341,7 @@ footer .col-md-3 a svg {
 
 .projectssec3 .projectdiv img {
   width: 100%;
-  height: 100%;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
   transition: all 0.7s ease-in-out;
@@ -1314,6 +1364,7 @@ footer .col-md-3 a svg {
   padding: 0 25px;
   opacity: 0;
   transition: all 0.7s ease-in-out;
+  padding: 10px;
 }
 
 .projectssec3 .projectdiv .hoverproject p {
@@ -1391,8 +1442,8 @@ footer .col-md-3 a svg {
 }
 
 .groupsec img {
-  width: 100%;
-  height: 400px;
+  width: 50%;
+  height: 300px;
   object-fit: contain;
 }
 
@@ -1580,6 +1631,7 @@ footer .col-md-3 a svg {
 }
 
 @media screen and (max-width:1280px) {
+
   /* .sec3imgdiv .mainimg {
     width: 400px;
     height: 400px;
@@ -1599,6 +1651,9 @@ footer .col-md-3 a svg {
     border-radius: 50%;
     position: absolute;
   } */
+  .homesec8 .swiper-slide {
+    padding: 20px;
+  }
 
   .sec3imgdiv .img1 {
     right: 170px;
@@ -1624,10 +1679,23 @@ footer .col-md-3 a svg {
 }
 
 @media screen and (max-width:1024px) {
+  .aboutsec2 img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  .sec3imgdiv {
+    position: relative;
+    height: 300px;
+
+
+  }
+
   .sec3imgdiv .mainimg {
     width: 300px;
     height: 300px;
-
+    right: 15%;
   }
 
   .sec3imgdiv .img1,
@@ -1659,20 +1727,65 @@ footer .col-md-3 a svg {
     /* bottom: -50px; */
   }
 
+  .homesec8 .swiper-slide {
+    padding: 0;
+
+  }
+
+  .homesec8 .swiper-slide .swipertalk {
+    padding: 0px 10px 150px;
+  }
+
 }
 
 @media screen and (max-width:768px) {
+  .navbar img {
+    margin-left: -30px;
+
+  }
+
+  .offcanvas-body a {
+    border: none !important;
+  }
+
   .homeSec1 {
     padding: 100px 20px;
   }
 
   .homeSec1 div h1 {
     font-size: 60px;
-
   }
 
   .homeSec1 div p {
     width: 80%;
+  }
+
+  .homesec2 .col-sm-12 {
+    margin-top: 60px;
+  }
+
+  .aboutsec2 img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .aboutsec4 img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .detailhover {
+    top: 0;
+  }
+
+  .hoverdiv:hover~.detailhover {
+    opacity: 1 !important;
+    transform: translateY(0);
+  }
+
+  .detailhover:hover {
+    opacity: 1 !important;
+    transform: translateY(0);
 
   }
 
@@ -1701,6 +1814,10 @@ footer .col-md-3 a svg {
     /* bottom: -50px; */
   }
 
+  .clientslider .swiper-slide {
+    border-radius: 10px;
+  }
+
   .homesec8 .swiper-slide .swipertalk {
     padding: 0px 10px 150px;
   }
@@ -1712,13 +1829,32 @@ footer .col-md-3 a svg {
   .aboutsec5 a {
     margin-top: 40px;
   }
-  footer .col-sm-12{
+
+  footer .col-sm-12 {
     margin-top: 30px;
   }
-  .contactsec2 .col-sm-12{
+
+  .groupsec img {
+    display: inline-block;
+    height: 250px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .projectssec3 .detailimg {
+    width: 90%;
+    object-fit: cover;
+  }
+
+  .groupsec.bg .row {
+    flex-direction: column-reverse;
+  }
+
+  .contactsec2 .col-sm-12 {
     margin-top: 40px;
   }
-  .contactsec3 .info{
+
+  .contactsec3 .info {
     left: 10%;
   }
 }
@@ -1729,7 +1865,7 @@ footer .col-md-3 a svg {
   }
 
   .homeSec1 div h1 {
-    font-size: 30px;
+    font-size: 60px;
 
   }
 
