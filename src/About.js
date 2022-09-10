@@ -141,13 +141,24 @@ function About() {
             <section className='aboutsec6' id="staff">
                 <h2 className="fadeInDown wow span12" data-wow-duration="2s" data-wow-delay="0.1s">Meet our Staff</h2>
                 <Swiper
-                    slidesPerView={4}
+                    slidesPerView={1}
                     spaceBetween={30}
                     slidesPerGroup={1}
-                    loop={true}
+                    // loop={true}
                     loopFillGroupWithBlank={true}
                     autoplay={{ delay: 2000 }}
                     modules={[Autoplay]}
+
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 4,
+                        },
+                    }}
+                    // modules={[Autoplay]}
+                    // className="mySwiper clientslider"
                     className="mySwiper fadeInUp wow" data-wow-duration="2s" data-wow-delay="0.1s"
                 >
                     <SwiperSlide>
