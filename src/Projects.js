@@ -34,7 +34,7 @@ function Projects() {
         </div>
       </section>
       <section className='projectssec2'>
-        <h3 className="fadeInDown wow" data-wow-duration="2s" data-wow-delay="0.1s">Projects</h3>
+        <h3 className="fadeInDown wow" data-wow-duration="2s" data-wow-delay="0.1s">Our Swimming pools and Land scape Projects</h3>
         <Container>
           <Row>
             {projects.slice(0, 7).map((project) => {
@@ -65,7 +65,7 @@ function Projects() {
                 <p>We have a wealth of experience working as main contractors on all kinds of projects, big and small, from home maintenance and improvements to extensions.</p>
               </div>
             </Col>
-            <Col md="6" sm="12">
+            <Col md="6" sm="12" className='text-center'>
               <img className='detailimg slideInRight wow' data-wow-duration="2s" data-wow-delay="0.1s" src="images/SLO-pqxohas18by3uuetq4j91wu9t9hveajwagtiatomee.jpg" alt='' />
             </Col>
             {projects.slice(7, 16).map((project) => {
