@@ -78,7 +78,9 @@ h5 {
   text-decoration: none;
   font-weight: 600;
 }
-
+.offcanlink span{
+  color: #ef5e24;
+}
 .navbar a:hover {
   color: #ef5e24 !important;
 }
