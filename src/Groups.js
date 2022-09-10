@@ -10,10 +10,10 @@ function Groups() {
           <h3>Our Groups</h3>
         </div>
       </section>
-      <section className='groupsec bg' id="DiarBusiness">
+      <section className='groupsec ' id="DiarBusiness">
         <Container fluid>
           <Row className='align-items-center'>
-            <Col md="6" sm="12">
+            <Col md="6" sm="12" className='text-center'>
               <img className="slideInLeft wow" data-wow-duration="2s" data-wow-delay="0.1s" src="images/Picture5.png" alt="" />
             </Col>
             <Col md="6" sm="12" className="grouptext">
@@ -46,7 +46,7 @@ function Groups() {
           </Row>
         </Container>
       </section >
-      <section className='groupsec' id="Diar">
+      <section className='groupsec bg' id="Diar">
         <Container fluid>
           <Row className='align-items-center'>
             <Col md="6" sm="12" className="grouptext">
@@ -71,16 +71,16 @@ function Groups() {
                 </ul>
               </div>
             </Col>
-            <Col md="6" sm="12">
+            <Col md="6" sm="12" className='text-center'>
               <img className="slideInRight wow" data-wow-duration="2s" data-wow-delay="0.1s" src="images/Picture3.png" alt="" />
             </Col>
           </Row>
         </Container>
       </section>
-      <section className='groupsec bg' id="flash">
+      <section className='groupsec ' id="flash">
         <Container fluid>
           <Row className='align-items-center'>
-            <Col md="6" sm="12">
+            <Col md="6" sm="12" className='text-center'>
               <img src="images/Picture6.png" className="slideInLeft wow" data-wow-duration="2s" data-wow-delay="0.1s" alt="" />
             </Col>
             <Col md="6" sm="12" className="grouptext">
@@ -108,7 +108,7 @@ function Groups() {
           </Row>
         </Container >
       </section >
-      <section className='groupsec' id="pixels">
+      <section className='groupsec bg' id="pixels">
         <Container fluid>
           <Row className='align-items-center'>
             <Col md="6" sm="12" className="grouptext">
@@ -143,7 +143,7 @@ function Groups() {
                 </ul>
               </div>
             </Col>
-            <Col md="6" sm="12">
+            <Col md="6" sm="12" className='text-center'>
               <img className="slideInRight wow" data-wow-duration="2s" data-wow-delay="0.1s" src="images/Picture4.png" alt="" />
             </Col>
           </Row>
