@@ -6,6 +6,8 @@ import { AiFillHome, AiFillPhone } from "react-icons/ai"
 import { RiAwardFill } from "react-icons/ri"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from 'swiper';
+import { FreeMode } from "swiper";
+
 import { FiHeadphones } from "react-icons/fi"
 import { GiTeamIdea } from "react-icons/gi"
 import Footer from "./Footer";
@@ -430,7 +432,7 @@ function Home() {
                             <div>
                                 <p>Call for help!</p>
                                 <h3>
-                                01066674323
+                                    01066674323
                                 </h3>
                             </div>
                         </Col>
@@ -448,15 +450,23 @@ function Home() {
                                 <li>New Alamein</li>
                             </ol>
                             <Swiper
-                                slidesPerView={3}
-                                spaceBetween={30}
+                                slidesPerView={1}
+                                spaceBetween={10}
                                 slidesPerGroup={1}
-                                loop={true}
+                                // loop={true}
                                 loopFillGroupWithBlank={true}
                                 navigation={true}
                                 autoplay={{ delay: 1000 }}
+                                breakpoints={{
+                                    640: {
+                                        slidesPerView: 2,
+                                    },
+                                    768: {
+                                        slidesPerView: 3,
+                                    },
+                                }}
                                 modules={[Navigation, Autoplay]}
-                                className="mySwiper"
+                                className="mySwiper wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s"
                             >
                                 <SwiperSlide><img src="images/Picture19.png" alt="" /></SwiperSlide>
                                 <SwiperSlide><img src="images/Picture20.png" alt="" /></SwiperSlide>
@@ -464,14 +474,41 @@ function Home() {
                                 <SwiperSlide><img src="images/Picture23.png" alt="" /></SwiperSlide>
                                 <SwiperSlide><img src="images/Picture24.png" alt="" /></SwiperSlide>
                             </Swiper>
+                            {/* <Swiper
+                                slidesPerView={3}
+                                spaceBetween={30}
+                                // slidesPerGroup={1}
+                                loop={true}
+                                loopFillGroupWithBlank={true}
+                                navigation={true}
+                                autoplay={{ delay: 1000 }}
+                                modules={[Navigation, Autoplay]}
+                                className="mySwiper"
+
+                            >
+                                <SwiperSlide><img src="images/Picture19.png" alt="" /></SwiperSlide>
+                                <SwiperSlide><img src="images/Picture20.png" alt="" /></SwiperSlide>
+                                <SwiperSlide><img src="images/Picture22.png" alt="" /></SwiperSlide>
+                                <SwiperSlide><img src="images/Picture23.png" alt="" /></SwiperSlide>
+                                <SwiperSlide><img src="images/Picture24.png" alt="" /></SwiperSlide>
+                            </Swiper> */}
                         </Col>
                         <Col lg="6" md="6" sm="12">
                             <h5>Happy Clients</h5>
                             <h3>We are proud to <span> work with</span></h3>
                             <Swiper
-                                slidesPerView={3}
-                                spaceBetween={30}
-                                autoplay={{ delay: 1000 }}
+                                slidesPerView={1}
+                                spaceBetween={10}
+                                slidesPerGroup={1}
+                                autoplay={{ delay: 1000 }}   
+                                breakpoints={{
+                                    640: {
+                                        slidesPerView: 2,
+                                    },
+                                    768: {
+                                        slidesPerView: 3,
+                                    },
+                                }}
                                 modules={[Autoplay]}
                                 className="mySwiper clientslider"
                             >
@@ -482,9 +519,18 @@ function Home() {
                                 <SwiperSlide><img src="images/Picture11.png" alt="" /></SwiperSlide>
                             </Swiper>
                             <Swiper
-                                slidesPerView={3}
-                                spaceBetween={30}
-                                autoplay={{ delay: 1000 }}
+                                slidesPerView={1}
+                                spaceBetween={10}
+                                slidesPerGroup={1}
+                                autoplay={{ delay: 1000 }}   
+                                breakpoints={{
+                                    640: {
+                                        slidesPerView: 2,
+                                    },
+                                    768: {
+                                        slidesPerView: 3,
+                                    },
+                                }}
                                 modules={[Autoplay]}
                                 className="mySwiper clientslider"
                             >
