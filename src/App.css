@@ -1694,8 +1694,8 @@ footer .col-md-3 a svg {
   .navbar img {
     margin-left: -30px;
   }
-  .offcanvas {
-    width: 70% !important;
+  .offcanvas.show {
+    width: 70% ;
   }
   .offcanvas-body a {
     border: none !important;
