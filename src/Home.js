@@ -223,16 +223,7 @@ function Home() {
                                 <h5>About us</h5>
                                 <h3>Diar Group a young group of individuals from different professional background <span>each with a passion to be part of something bigger than themselves</span></h3>
                                 <p> So we brought everything we know together, to build on one another and create a single entity that provides a premium service to other businesses.</p>
-                                <div className="iconssec3">
-                                    <div>
-                                        <GiTeamIdea />
-                                        <p>Our Team</p>
-                                    </div>
-                                    <div>
-                                        <FiHeadphones />
-                                        <p>Call For Inquires</p>
-                                    </div>
-                                </div>
+
                             </div>
                         </Col>
 
