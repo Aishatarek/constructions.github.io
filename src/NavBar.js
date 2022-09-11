@@ -1,25 +1,55 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { AiFillPhone } from "react-icons/ai"
-import { FaFacebookF } from "react-icons/fa"
-import { ImLinkedin2 } from "react-icons/im"
-import { Link, NavLink } from "react-router-dom"
-import { HashLink } from "react-router-hash-link"
-import Form from 'react-bootstrap/Form';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import { useState } from 'react';
+import React,{useEffect} from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { AiFillPhone } from "react-icons/ai";
+import { FaFacebookF } from "react-icons/fa";
+import { ImLinkedin2 } from "react-icons/im";
+import { Link, NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import Form from "react-bootstrap/Form";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { useState } from "react";
 function NavBar() {
+  const [stickyClass, setStickyClass] = useState("relative");
   const [closee, setClosee] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    setVisible(prevScrollPos > currentScrollPos  && currentScrollPos >500);
+    setPrevScrollPos(currentScrollPos);
+    if(visible){
+      setStickyClass("fixed top-0 left-0 z-50")
+    }else{
+      setStickyClass("relative");
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos, visible, handleScroll]);
+
   return (
     <>
-      {['lg'].map((expand) => (
-        <Navbar expanded={closee} key={expand} bg="dark" variant="dark" expand={expand} >
+      {["lg"].map((expand) => (
+        <Navbar
+          className={`h-16 w-full bg-gray-200 ${stickyClass}`}
+          expanded={closee}
+          key={expand}
+          bg="dark"
+          variant="dark"
+          expand={expand}
+        >
           <Container fluid>
-            <NavLink to="/"><img src="images/mail.png" alt="" /></NavLink>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} onClick={() => setClosee(true)} />
+            <NavLink to="/">
+              <img src="images/mail.png" alt="" />
+            </NavLink>
+            <Navbar.Toggle
+              aria-controls={`offcanvasNavbar-expand-${expand}`}
+              onClick={() => setClosee(true)}
+            />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -27,38 +57,86 @@ function NavBar() {
             >
               <Offcanvas.Header closeButton onClick={() => setClosee(false)}>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  <NavLink to="/" className="offcanlink" onClick={() => setClosee(false)}>
+                  <NavLink
+                    to="/"
+                    className="offcanlink"
+                    onClick={() => setClosee(false)}
+                  >
                     Dair <span>Group</span>
                   </NavLink>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="navgroup align-items-center w-100 justify-content-between w-100">
-                  <NavLink to="/" onClick={() => setClosee(false)}> Home</NavLink>
+                  <NavLink to="/" onClick={() => setClosee(false)}>
+                    {" "}
+                    Home
+                  </NavLink>
                   <div className="dropdownn">
-                    <NavLink className="dropdownitem" to="/About" onClick={() => setClosee(false)}>
+                    <NavLink
+                      className="dropdownitem"
+                      to="/About"
+                      onClick={() => setClosee(false)}
+                    >
                       About Us
                     </NavLink>
                     <div className="dropdownlist">
-                      <HashLink to="/About#mission" onClick={() => setClosee(false)}>Our Mission</HashLink>
-                      <HashLink to="/About#staff" onClick={() => setClosee(false)}>Our Staff</HashLink>
+                      <HashLink
+                        to="/About#mission"
+                        onClick={() => setClosee(false)}
+                      >
+                        Our Mission
+                      </HashLink>
+                      <HashLink
+                        to="/About#staff"
+                        onClick={() => setClosee(false)}
+                      >
+                        Our Staff
+                      </HashLink>
                     </div>
                   </div>
-                  <div className="dropdownn" >
-                    <NavLink className="dropdownitem" to="/Groups" onClick={() => setClosee(false)}>
+                  <div className="dropdownn">
+                    <NavLink
+                      className="dropdownitem"
+                      to="/Groups"
+                      onClick={() => setClosee(false)}
+                    >
                       Our Group
                     </NavLink>
                     <div className="scondlist">
-                      <HashLink to="/Groups#DiarBusiness" onClick={() => setClosee(false)}>Diar For integrated business</HashLink>
-                      <HashLink to="/Groups#Diar" onClick={() => setClosee(false)}>Diar For MANAGEMENT SPORTS & LEISURE FACILITIES</HashLink>
-                      <HashLink to="/Groups#flash" onClick={() => setClosee(false)}>flash water</HashLink>
-                      <HashLink to="/Groups#pixels" onClick={() => setClosee(false)}>pixels</HashLink>
+                      <HashLink
+                        to="/Groups#DiarBusiness"
+                        onClick={() => setClosee(false)}
+                      >
+                        Diar For integrated business
+                      </HashLink>
+                      <HashLink
+                        to="/Groups#Diar"
+                        onClick={() => setClosee(false)}
+                      >
+                        Diar For MANAGEMENT SPORTS & LEISURE FACILITIES
+                      </HashLink>
+                      <HashLink
+                        to="/Groups#flash"
+                        onClick={() => setClosee(false)}
+                      >
+                        flash water
+                      </HashLink>
+                      <HashLink
+                        to="/Groups#pixels"
+                        onClick={() => setClosee(false)}
+                      >
+                        pixels
+                      </HashLink>
                     </div>
                   </div>
-                  <NavLink to="/Projects" onClick={() => setClosee(false)}>Our projects</NavLink>
-                  <NavLink to="/ContactUs" onClick={() => setClosee(false)}>Contact us</NavLink>
+                  <NavLink to="/Projects" onClick={() => setClosee(false)}>
+                    Our projects
+                  </NavLink>
+                  <NavLink to="/ContactUs" onClick={() => setClosee(false)}>
+                    Contact us
+                  </NavLink>
                 </Nav>
-
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
@@ -99,7 +177,7 @@ function NavBar() {
         </Container>
       </Navbar> */}
     </>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;
