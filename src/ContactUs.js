@@ -37,15 +37,15 @@ function ContactUs() {
                                         <h5>ADDRESS:</h5>
                                         <p>Al Haram, Giza Governorate</p>
                                     </div>
-                                    <div className='d-flex mt-5'>
-                                        <div>
+                                    <div className='d-flex mt-5 flex-wrap'>
+                                        <div style={{marginRight:"20px"}}>
                                             <h5>PHONE:</h5>
                                             <p>01066674323	-	01061624413
                                                 <br />
                                                 01000753028    -    01201531313
                                             </p>
                                         </div>
-                                        <div className='mx-5'>
+                                        <div >
                                             <h5>EMAIL:</h5>
                                             <p>diargroupconst@gmail.com</p>
                                         </div>
