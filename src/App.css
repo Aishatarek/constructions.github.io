@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 /*
   background: -webkit-linear-gradient( #f5c782 20%,#c18d41);
@@ -16,7 +16,6 @@ h3,
 p,
 h5 {
   font-family: Roboto;
-
 }
 
 .preloaderr {
@@ -27,7 +26,6 @@ h5 {
   background-color: white;
 }
 
-
 .navbar {
   background-color: rgba(0, 0, 0, 0.3) !important;
   width: 100%;
@@ -36,7 +34,11 @@ h5 {
   padding: 0 !important;
   text-align: center;
 }
-
+.fixed {
+  position: fixed;
+  z-index: 100;
+  background-color: #2c2c2e !important;
+}
 .offcanvas {
   background-color: #2c2c2e !important;
 }
@@ -54,7 +56,7 @@ h5 {
   position: relative;
   z-index: 3;
   transition: all 1s ease-in-out;
-  border-left: 2px solid rgba(255, 255, 255, .1);
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
   height: 110px;
   display: flex;
   align-items: center;
@@ -78,7 +80,7 @@ h5 {
   text-decoration: none;
   font-weight: 600;
 }
-.offcanlink span{
+.offcanlink span {
   color: #ef5e24;
 }
 .navbar a:hover {
@@ -101,14 +103,13 @@ h5 {
 }
 
 .offcanvas-header .btn-close::after {
-  content: 'X';
+  content: "X";
   position: absolute;
   color: white !important;
   top: 0;
   left: 30%;
   font-size: 20px;
 }
-
 
 .navbar-brand {
   padding: 5px !important;
@@ -135,7 +136,7 @@ h5 {
   transition: all 1s ease-in-out;
   display: block;
   cursor: pointer;
-  border-left: 2px solid rgba(255, 255, 255, .1) !important;
+  border-left: 2px solid rgba(255, 255, 255, 0.1) !important;
   height: 110px;
   display: flex;
   align-items: center;
@@ -205,7 +206,6 @@ h5 {
   font-weight: 400;
   width: 50%;
   margin: auto;
-
 }
 
 .homeSec1 div h1 {
@@ -301,7 +301,7 @@ h5 {
 }
 
 .detailsdiv h3::after {
-  content: '';
+  content: "";
   left: 0;
   bottom: -5px;
   position: absolute;
@@ -310,6 +310,7 @@ h5 {
   background-color: #ef5e24;
   border-radius: 5px;
   text-align: justify;
+  z-index: 33;
 }
 
 .detailsdiv p {
@@ -341,16 +342,15 @@ h5 {
   color: #ef5e24;
 }
 
-.hoverdiv:hover~.detailhover {
+.hoverdiv:hover ~ .detailhover {
   opacity: 1 !important;
   transform: translateY(-230px);
-
 }
 
 .detailhover:hover {
   opacity: 1 !important;
   transform: translateY(-230px);
-
+  z-index: 33;
 }
 
 /******************************/
@@ -372,7 +372,7 @@ h5 {
 }
 
 .homesec3 .col-md-6 h5::after {
-  content: '';
+  content: "";
   top: 15px;
   left: -50px;
   position: absolute;
@@ -381,7 +381,6 @@ h5 {
   background-color: #ef5e24;
   border-radius: 5px;
   box-shadow: 0 7px 16px rgb(12 12 12 / 22%);
-
 }
 
 .homesec3 .col-md-6 h3 {
@@ -389,7 +388,6 @@ h5 {
   font-weight: 1000;
   font-size: 40px;
   color: #000000;
-
 }
 
 .homesec3 .col-md-6 h3 span {
@@ -398,7 +396,7 @@ h5 {
 
 .homesec3 .col-md-6 p {
   text-align: justify;
-  color: #6E6E6E;
+  color: #6e6e6e;
   font-size: 20px;
   font-weight: 600;
 }
@@ -428,7 +426,6 @@ h5 {
 .sec3imgdiv {
   position: relative;
   height: 400px;
-
 }
 
 .sec3imgdiv .mainimg {
@@ -466,7 +463,6 @@ h5 {
 .sec3imgdiv .img3 {
   right: 150px;
   top: 200px;
-
 }
 
 .sec3imgdiv .img4 {
@@ -499,7 +495,7 @@ h5 {
 }
 
 .homesec4 .col-md-3 h5::after {
-  content: '';
+  content: "";
   top: 10px;
   left: -50px;
   position: absolute;
@@ -508,7 +504,6 @@ h5 {
   background-color: #ef5e24;
   border-radius: 5px;
   box-shadow: 0 7px 16px rgb(12 12 12 / 22%);
-
 }
 
 .homesec4 .col-md-3 h3 {
@@ -560,25 +555,23 @@ h5 {
   background-color: #000;
 }
 
-
 /**************************************************************************/
 .homesec5 {
   background-image: url(images/bg-counter1.jpg);
   background-size: cover;
   margin: 100px 0;
-
 }
 
 .sec5after {
   height: 85px;
   width: 4px;
-  background-color: rgba(88, 88, 88, .35);
+  background-color: rgba(88, 88, 88, 0.35);
   position: relative;
   border-radius: 2px;
 }
 
 .sec5after::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   height: 25px;
@@ -589,7 +582,6 @@ h5 {
 
 .sec5after::after:hover {
   top: 30px;
-
 }
 
 .sec5after:hover.sec5after::after {
@@ -598,11 +590,10 @@ h5 {
 
 .homesec5 .col-md-3 {
   padding: 20px;
-
 }
 
 .homesec5 .col-md-3 p {
-  color: #6E6E6E;
+  color: #6e6e6e;
   margin-left: 12px;
   font-size: 20px;
   font-weight: 500;
@@ -664,7 +655,7 @@ h5 {
 }
 
 .homesec6 .col-md-6 h5::after {
-  content: '';
+  content: "";
   top: 10px;
   left: -50px;
   position: absolute;
@@ -673,7 +664,6 @@ h5 {
   background-color: #ef5e24;
   border-radius: 5px;
   box-shadow: 0 7px 16px rgb(12 12 12 / 22%);
-
 }
 
 .homesec6 .col-md-6 h3 {
@@ -681,7 +671,6 @@ h5 {
   font-weight: 1000;
   font-size: 40px;
   color: #000000;
-
 }
 
 .homesec6 .col-md-6 h3 span {
@@ -689,7 +678,7 @@ h5 {
 }
 
 .homesec6 .col-md-6 ol li {
-  color: #6E6E6E;
+  color: #6e6e6e;
   font-size: 18px;
   font-weight: 400;
 }
@@ -820,7 +809,6 @@ h5 {
   padding: 30px 0;
   margin: 150px 0;
   background-size: contain;
-
 }
 
 .sec8div .sec8div img {
@@ -926,14 +914,12 @@ footer .col-md-3 h5 {
   font-weight: 1000;
 }
 
-
 footer .col-md-3 p {
   color: #818a91;
   text-align: justify;
   font-weight: 700;
   margin-top: 10px;
   margin-left: 10px;
-
 }
 
 footer .col-md-3 a {
@@ -966,7 +952,6 @@ footer .col-md-3 .iconsfooter div {
   align-items: center;
   justify-content: center;
   margin-left: 10px;
-
 }
 
 footer .col-md-3 .iconsfooter div svg {
@@ -1036,7 +1021,7 @@ footer .col-md-3 a svg {
   margin-top: 50px;
 }
 
-.aboutsec3 .col-md-6>div {
+.aboutsec3 .col-md-6 > div {
   display: flex;
   align-items: flex-start;
   border-bottom: 1px solid #ffffff24;
@@ -1053,7 +1038,6 @@ footer .col-md-3 a svg {
   color: white;
   font-size: 30px;
   margin: 25px 0px 10px 10px;
-
 }
 
 .aboutsec3 .col-md-6 div p {
@@ -1097,7 +1081,6 @@ footer .col-md-3 a svg {
   line-height: 38px;
   list-style: square;
   margin-left: 10px;
-
 }
 
 /**************************/
@@ -1247,7 +1230,6 @@ footer .col-md-3 a svg {
   object-fit: contain;
   border-radius: 10px;
   transition: all 0.7s ease-in-out;
-
 }
 
 .projectssec2 .projectdiv .hoverproject {
@@ -1257,7 +1239,7 @@ footer .col-md-3 a svg {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(29, 43, 54, .5);
+  background-color: rgba(29, 43, 54, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1267,7 +1249,6 @@ footer .col-md-3 a svg {
   opacity: 0;
   transition: all 0.7s ease-in-out;
   padding: 10px;
-
 }
 
 .projectssec2 .projectdiv .hoverproject p {
@@ -1347,7 +1328,6 @@ footer .col-md-3 a svg {
   object-fit: cover;
   border-radius: 10px;
   transition: all 0.7s ease-in-out;
-
 }
 
 .projectssec3 .projectdiv .hoverproject {
@@ -1357,7 +1337,7 @@ footer .col-md-3 a svg {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(29, 43, 54, .5);
+  background-color: rgba(29, 43, 54, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1402,7 +1382,6 @@ footer .col-md-3 a svg {
 .projectmodal .modal-body {
   padding: 0 !important;
   width: 100%;
-
 }
 
 .projectmodal .swiper-slide img {
@@ -1425,7 +1404,6 @@ footer .col-md-3 a svg {
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
 
 .groupssec1 h3 {
@@ -1448,7 +1426,6 @@ footer .col-md-3 a svg {
   height: 300px;
   object-fit: contain;
   padding: 10px;
-
 }
 
 .groupsec .grouptext {
@@ -1466,7 +1443,6 @@ footer .col-md-3 a svg {
   margin: 30px 5px;
   color: #000;
   font-weight: 600;
-
 }
 
 .groupsec .grouptext ul li {
@@ -1558,7 +1534,6 @@ footer .col-md-3 a svg {
 .contactform input:focus,
 .contactform textarea:focus {
   border: 1px solid #ef5e24;
-
 }
 
 .contactform input[type="submit"] {
@@ -1629,32 +1604,12 @@ footer .col-md-3 a svg {
   margin-left: 10px;
 }
 
-.contactsec3 .location:hover~.info {
+.contactsec3 .location:hover ~ .info {
   transform: translateY(-10px);
   opacity: 1;
 }
 
-@media screen and (max-width:1280px) {
-
-  /* .sec3imgdiv .mainimg {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-left: 30px;
-  }
-  
-  .sec3imgdiv .img1,
-  .sec3imgdiv .img2,
-  .sec3imgdiv .img3,
-  .sec3imgdiv .img4 {
-    width: 150px;
-    height: 150px;
-    border: 5px solid white;
-    object-fit: cover;
-    border-radius: 50%;
-    position: absolute;
-  } */
+@media screen and (max-width: 1280px) {
   .homesec8 .swiper-slide {
     padding: 20px;
   }
@@ -1672,17 +1627,15 @@ footer .col-md-3 a svg {
   .sec3imgdiv .img3 {
     right: 50px;
     /* top: 200px; */
-
   }
 
   .sec3imgdiv .img4 {
     right: 170px;
     /* bottom: -50px; */
   }
-
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .aboutsec2 img {
     width: 100%;
     object-fit: contain;
@@ -1692,8 +1645,6 @@ footer .col-md-3 a svg {
   .sec3imgdiv {
     position: relative;
     height: 300px;
-
-
   }
 
   .sec3imgdiv .mainimg {
@@ -1723,7 +1674,6 @@ footer .col-md-3 a svg {
   .sec3imgdiv .img3 {
     right: 100px;
     top: 150px;
-
   }
 
   .sec3imgdiv .img4 {
@@ -1733,21 +1683,20 @@ footer .col-md-3 a svg {
 
   .homesec8 .swiper-slide {
     padding: 0;
-
   }
 
   .homesec8 .swiper-slide .swipertalk {
     padding: 0px 10px 150px;
   }
-
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .navbar img {
     margin-left: -30px;
-
   }
-
+  .offcanvas {
+    width: 70%;
+  }
   .offcanvas-body a {
     border: none !important;
   }
@@ -1782,7 +1731,7 @@ footer .col-md-3 a svg {
     top: 0;
   }
 
-  .hoverdiv:hover~.detailhover {
+  .hoverdiv:hover ~ .detailhover {
     opacity: 1 !important;
     transform: translateY(0);
   }
@@ -1790,7 +1739,6 @@ footer .col-md-3 a svg {
   .detailhover:hover {
     opacity: 1 !important;
     transform: translateY(0);
-
   }
 
   .sec3imgdiv {
@@ -1810,7 +1758,6 @@ footer .col-md-3 a svg {
   .sec3imgdiv .img3 {
     right: 0px;
     top: 130px;
-
   }
 
   .sec3imgdiv .img4 {
@@ -1861,20 +1808,26 @@ footer .col-md-3 a svg {
   .contactsec3 .info {
     left: 10%;
   }
+  .contactsec3 .info {
+    width: 256px;
+    left: 14.5%;
+    padding-bottom: 5px;
+  }
 }
 
-@media screen and (max-width:412px) {
+@media screen and (max-width: 412px) {
   .homeSec1 {
     padding: 200px 20px;
   }
 
   .homeSec1 div h1 {
     font-size: 60px;
-
   }
 
   .homeSec1 div p {
     font-size: 18px;
-
+  }
+  .contactsec1 h3 {
+    font-size: 50px;
   }
 }
