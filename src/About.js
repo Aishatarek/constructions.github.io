@@ -164,6 +164,13 @@ function About() {
                     <SwiperSlide>
                         <div>
                         <IoIosPerson />
+                            <h3>Samer Fouad</h3>
+                            <p>CEO</p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div>
+                        <IoIosPerson />
                             <h3>Mohamed Samer</h3>
                             <p>Projctor manger</p>
                         </div>
